@@ -1,0 +1,14 @@
+// Cloudflare Workers config for the Sultan Autos static site.
+// The whole repo root is the site; files listed in .assetsignore are not published.
+{
+  "name": "sultanauto",
+  "compatibility_date": "2026-11-18",
+  "assets": {
+    "directory": ".",
+    // Serve 404.html (with a 404 status) for URLs that don't exist.
+    "not_found_handling": "404-page"
+  },
+  // Keep the *.workers.dev address off; the site lives on sultanautos.uk.
+  "workers_dev": false,
+  "observability": { "enabled": true }
+}
